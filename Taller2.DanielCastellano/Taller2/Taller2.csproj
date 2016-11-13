@@ -40,7 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="0 Procedimiento\AlgoritmoGeneraInversion.cs" />
+    <Compile Include="GeneracionDeInversion\0 Procedimiento\GeneraInversion.cs" />
+    <Compile Include="GeneracionDeInversion\0 Procedimiento\NuevaInversion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
