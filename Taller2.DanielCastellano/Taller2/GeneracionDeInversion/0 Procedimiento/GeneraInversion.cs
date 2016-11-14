@@ -22,7 +22,8 @@ namespace Taller2.Procedimiento
             DateTime FechaDeVencimiento = FechaActual.AddDays(PlazoEnDias);
             nuevaInversion.FechaDeVencimiento = FechaDeVencimiento;
 
-            decimal TasaNeta = ((ValorFacial - ValorTransadoNeto) / (ValorTransadoNeto * (PlazoEnDias / 365))) * 100;
+            decimal TasaNeta = (ValorFacial - ValorTransadoNeto) / (ValorTransadoNeto * ((decimal)PlazoEnDias / 365)) *100;
+
             decimal TasaBruta = TasaNeta / (1 - TasaDeImpuesto);
             nuevaInversion.TasaBruta = TasaBruta;
 

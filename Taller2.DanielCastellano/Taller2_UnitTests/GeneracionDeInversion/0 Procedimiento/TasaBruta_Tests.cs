@@ -16,6 +16,7 @@ namespace Taller2_UnitTests.GeneracionDeInversion.Procedimiento
         public void TasaBruta_CasoUnico()
         {
             resultadoEsperado = 12.3008M;
+
             nuevaInversion = NuevaInversionConTratamientoFiscalYAñoBisiesto();
 
             resultadoObtenido = nuevaInversion.TasaBruta;
