@@ -27,7 +27,7 @@ namespace Taller2.Funciones
             decimal TasaBruta = CalculeTasaBruta(TasaDeImpuesto, TasaNeta);
             nuevaInversion.TasaBruta = TasaBruta;
 
-            decimal ValorTransadoBruto = ObtengaValorTransadoBruto(ValorTransadoNeto, ValorFacial, FechaActual, PlazoEnDias, TratamientoFiscal, TasaBruta);
+            decimal ValorTransadoBruto = DetermineValorTransadoBruto(ValorTransadoNeto, ValorFacial, FechaActual, PlazoEnDias, TratamientoFiscal, TasaBruta);
             nuevaInversion.ValorTransadoBruto = ValorTransadoBruto;
 
             decimal ImpuestoPagado = DetermineImpuestoPagado(ValorTransadoNeto, TratamientoFiscal, ValorTransadoBruto);
@@ -63,28 +63,30 @@ namespace Taller2.Funciones
             return TasaNeta / (1 - TasaDeImpuesto);
         }
 
-        private static decimal ObtengaValorTransadoBruto(decimal ValorTransadoNeto, decimal ValorFacial, DateTime FechaActual, int PlazoEnDias, bool TratamientoFiscal, decimal TasaBruta)
+        private static decimal DetermineValorTransadoBruto(decimal ValorTransadoNeto, decimal ValorFacial, DateTime FechaActual, int PlazoEnDias, bool TratamientoFiscal, decimal TasaBruta)
         {
             if (TratamientoFiscal)
             {
-                return DetermineValorTransadoBruto(ValorFacial, FechaActual, PlazoEnDias, TasaBruta);
+                return DetermineValorTransadoNeto(ValorFacial, FechaActual, PlazoEnDias, TasaBruta);
             }
             else
             {
                 return ValorTransadoNeto;
             }
+
         }
 
-        private static decimal DetermineValorTransadoBruto(decimal ValorFacial, DateTime FechaActual, int PlazoEnDias, decimal TasaBruta)
+        private static decimal DetermineValorTransadoNeto(decimal ValorFacial, DateTime FechaActual, int PlazoEnDias, decimal TasaBruta)
         {
             if (DateTime.IsLeapYear(FechaActual.Year))
             {
-                return ValorFacial / (1 + ((TasaBruta) / 100) * ((decimal)PlazoEnDias / 366));
+               return ValorFacial / (1 + ((TasaBruta) / 100) * ((decimal)PlazoEnDias / 366));
             }
             else
             {
                 return ValorFacial / (1 + ((TasaBruta) / 100) * ((decimal)PlazoEnDias / 365));
             }
+
         }
 
         private static decimal DetermineImpuestoPagado(decimal ValorTransadoNeto, bool TratamientoFiscal, decimal ValorTransadoBruto)

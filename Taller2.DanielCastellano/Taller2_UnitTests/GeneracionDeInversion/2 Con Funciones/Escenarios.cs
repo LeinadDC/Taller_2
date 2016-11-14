@@ -21,7 +21,7 @@ namespace Taller2_UnitTests.GeneracionDeInversion.Funciones
             ValorFacial = 320500;
             ValorTransadoNeto = 300000;
             TasaDeImpuesto = 0.08M;
-            FechaActual = new DateTime(2016,03,03);
+            FechaActual = new DateTime(2016, 03, 03);
             PlazoEnDias = 221;
             TratamientoFiscal = true;
 
@@ -37,6 +37,32 @@ namespace Taller2_UnitTests.GeneracionDeInversion.Funciones
             FechaActual = new DateTime(2014, 03, 03);
             PlazoEnDias = 221;
             TratamientoFiscal = true;
+
+            return GeneraInversion.GeneraNuevaInversion(ValorTransadoNeto, ValorFacial, TasaDeImpuesto, FechaActual, PlazoEnDias, TratamientoFiscal);
+
+        }
+
+        public NuevaInversion NuevaInversionSinTratamientoFiscalYAñoBisiesto()
+        {
+            ValorFacial = 320500;
+            ValorTransadoNeto = 300000;
+            TasaDeImpuesto = 0.08M;
+            FechaActual = new DateTime(2016, 03, 03);
+            PlazoEnDias = 221;
+            TratamientoFiscal = false;
+
+            return GeneraInversion.GeneraNuevaInversion(ValorTransadoNeto, ValorFacial, TasaDeImpuesto, FechaActual, PlazoEnDias, TratamientoFiscal);
+
+        }
+
+        public NuevaInversion NuevaInversionSinTratamientoFiscalYAñoNormal()
+        {
+            ValorFacial = 320500;
+            ValorTransadoNeto = 300000;
+            TasaDeImpuesto = 0.08M;
+            FechaActual = new DateTime(2014, 03, 03);
+            PlazoEnDias = 221;
+            TratamientoFiscal = false;
 
             return GeneraInversion.GeneraNuevaInversion(ValorTransadoNeto, ValorFacial, TasaDeImpuesto, FechaActual, PlazoEnDias, TratamientoFiscal);
 

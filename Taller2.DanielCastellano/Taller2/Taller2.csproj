@@ -42,8 +42,7 @@
   <ItemGroup>
     <Compile Include="GeneracionDeInversion\1 Procedimiento\GeneraInversion.cs" />
     <Compile Include="GeneracionDeInversion\1 Procedimiento\NuevaInversion.cs" />
-    <Compile Include="GeneracionDeInversion\3 Con Objetos\GeneraInversion.cs" />
-    <Compile Include="GeneracionDeInversion\3 Con Objetos\NuevaInversion.cs" />
+    <Compile Include="GeneracionDeInversion\3 ConObjetos\NuevaInversion.cs" />
     <Compile Include="GeneracionDeInversion\2 Con Funciones\GeneraInversion.cs" />
     <Compile Include="GeneracionDeInversion\2 Con Funciones\NuevaInversion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

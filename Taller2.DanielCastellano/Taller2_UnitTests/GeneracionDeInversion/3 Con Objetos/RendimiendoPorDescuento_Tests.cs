@@ -34,5 +34,29 @@ namespace Taller2_UnitTests.GeneracionDeInversion.Objetos
             Assert.AreEqual(resultadoEsperado, resultadoObtenido);
 
         }
+
+        [TestMethod]
+        public void RendimientoPorDescuento_AñoBisiesto_SinTratamientoFiscal()
+        {
+            resultadoEsperado = 20500;
+
+            nuevaInversion = NuevaInversionSinTratamientoFiscalYAñoBisiesto();
+            resultadoObtenido = nuevaInversion.RendimientoPorDescuento;
+
+            Assert.AreEqual(resultadoEsperado, resultadoObtenido);
+
+        }
+
+        [TestMethod]
+        public void RendimientoPorDescuento_AñoNormal_SinTratamientoFiscal()
+        {
+            resultadoEsperado = 20500;
+
+            nuevaInversion = NuevaInversionSinTratamientoFiscalYAñoNormal();
+            resultadoObtenido = nuevaInversion.RendimientoPorDescuento;
+
+            Assert.AreEqual(resultadoEsperado, resultadoObtenido);
+
+        }
     }
 }

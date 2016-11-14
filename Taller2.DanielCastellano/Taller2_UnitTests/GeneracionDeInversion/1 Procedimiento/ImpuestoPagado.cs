@@ -13,7 +13,7 @@ namespace Taller2_UnitTests.GeneracionDeInversion.Procedimiento
         private NuevaInversion nuevaInversion;
 
         [TestMethod]
-        public void ImpuestoPagado_AñoBisiesto()
+        public void ImpuestoPagado_AñoBisiesto_ConTratamientoFiscal()
         {
             resultadoEsperado = 1659.3592M;
 
@@ -24,11 +24,33 @@ namespace Taller2_UnitTests.GeneracionDeInversion.Procedimiento
         }
 
         [TestMethod]
-        public void ImpuestoPagado_AñoNormal()
+        public void ImpuestoPagado_AñoNormal_ConTratamientoFiscal()
         {
             resultadoEsperado = 1659.3592M;
 
             nuevaInversion = NuevaInversionConTratamientoFiscalYAñoNormal();
+            resultadoObtenido = nuevaInversion.ImpuestoPagado;
+
+            Assert.AreEqual(resultadoEsperado, resultadoObtenido);
+        }
+
+        [TestMethod]
+        public void ImpuestoPagado_AñoBisiesto_SinTratamientoFiscal()
+        {
+            resultadoEsperado = 0;
+
+            nuevaInversion = NuevaInversionSinTratamientoFiscalYAñoBisiesto();
+            resultadoObtenido = nuevaInversion.ImpuestoPagado;
+
+            Assert.AreEqual(resultadoEsperado, resultadoObtenido);
+        }
+
+        [TestMethod]
+        public void ImpuestoPagado_AñoNormal_SinTratamientoFiscal()
+        {
+            resultadoEsperado = 0;
+
+            nuevaInversion = NuevaInversionSinTratamientoFiscalYAñoNormal();
             resultadoObtenido = nuevaInversion.ImpuestoPagado;
 
             Assert.AreEqual(resultadoEsperado, resultadoObtenido);

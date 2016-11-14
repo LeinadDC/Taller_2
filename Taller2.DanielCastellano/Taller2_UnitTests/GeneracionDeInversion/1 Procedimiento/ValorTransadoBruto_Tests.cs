@@ -13,7 +13,7 @@ namespace Taller2_UnitTests.GeneracionDeInversion.Procedimiento
         private NuevaInversion nuevaInversion;
 
         [TestMethod]
-        public void ValorTransadoBruto_AñoBisiesto()
+        public void ValorTransadoBruto_AñoBisiesto_ConTratamientoFiscal()
         {
             resultadoEsperado = 298340.64080944350758853288365M;
 
@@ -24,11 +24,33 @@ namespace Taller2_UnitTests.GeneracionDeInversion.Procedimiento
         }
 
         [TestMethod]
-        public void ValorTransadoBruto_AñoNormal()
+        public void ValorTransadoBruto_AñoNormal_ConTratamientoFiscal()
         {
             resultadoEsperado = 298340.64080944350758853288362M;
 
             nuevaInversion = NuevaInversionConTratamientoFiscalYAñoNormal();
+            resultadoObtenido = nuevaInversion.ValorTransadoBruto;
+
+            Assert.AreEqual(resultadoEsperado, resultadoObtenido);
+        }
+
+        [TestMethod]
+        public void ValorTransadoBruto_AñoBisiesto_SinTratamientoFiscal()
+        {
+            resultadoEsperado = 300000;
+
+            nuevaInversion = NuevaInversionSinTratamientoFiscalYAñoBisiesto();
+            resultadoObtenido = nuevaInversion.ValorTransadoBruto;
+
+            Assert.AreEqual(resultadoEsperado, resultadoObtenido);
+        }
+
+        [TestMethod]
+        public void ValorTransadoBruto_AñoNormal_SinTratamientoFiscal()
+        {
+            resultadoEsperado = 300000;
+
+            nuevaInversion = NuevaInversionSinTratamientoFiscalYAñoNormal();
             resultadoObtenido = nuevaInversion.ValorTransadoBruto;
 
             Assert.AreEqual(resultadoEsperado, resultadoObtenido);

@@ -6,38 +6,31 @@ using System.Threading.Tasks;
 
 namespace Taller2.Objetos
 {
-    public class GeneraInversion
+    public class NuevaInversion
     {
-        public static NuevaInversion GeneraNuevaInversion(decimal ValorTransadoNeto,
+        decimal TasaNeta;
+
+        public NuevaInversion(decimal ValorTransadoNeto,
             decimal ValorFacial,
             decimal TasaDeImpuesto,
             DateTime FechaActual,
             int PlazoEnDias,
             bool TratamientoFiscal)
         {
-            NuevaInversion nuevaInversion = new NuevaInversion();
 
-            nuevaInversion.FechaDeValor = FechaActual;
+            FechaDeValor = FechaActual;
 
-            DateTime FechaDeVencimiento = CalculeFechaVencimiento(FechaActual, PlazoEnDias);
-            nuevaInversion.FechaDeVencimiento = FechaDeVencimiento;
+            FechaDeVencimiento = CalculeFechaVencimiento(FechaActual, PlazoEnDias);
 
-            decimal TasaNeta = DetermineTasaNeta(ValorTransadoNeto, ValorFacial, FechaActual, PlazoEnDias);
+            TasaNeta = DetermineTasaNeta(ValorTransadoNeto, ValorFacial, FechaActual, PlazoEnDias);
 
-            decimal TasaBruta = CalculeTasaBruta(TasaDeImpuesto, TasaNeta);
-            nuevaInversion.TasaBruta = TasaBruta;
+            TasaBruta = CalculeTasaBruta(TasaDeImpuesto, TasaNeta);
 
-            decimal ValorTransadoBruto = ObtengaValorTransadoBruto(ValorTransadoNeto, ValorFacial, FechaActual, PlazoEnDias, TratamientoFiscal, TasaBruta);
-            nuevaInversion.ValorTransadoBruto = ValorTransadoBruto;
+            ValorTransadoBruto = DetermineValorTransadoBruto(ValorTransadoNeto, ValorFacial, FechaActual, PlazoEnDias, TratamientoFiscal, TasaBruta);
 
-            decimal ImpuestoPagado = DetermineImpuestoPagado(ValorTransadoNeto, TratamientoFiscal, ValorTransadoBruto);
-            nuevaInversion.ImpuestoPagado = ImpuestoPagado;
+            ImpuestoPagado = DetermineImpuestoPagado(ValorTransadoNeto, TratamientoFiscal, ValorTransadoBruto);
 
-            decimal RendimientoPorDescuento = CalculeRendimientoPorDescuento(ValorFacial, ValorTransadoBruto);
-            nuevaInversion.RendimientoPorDescuento = RendimientoPorDescuento;
-
-            return nuevaInversion;
-
+            RendimientoPorDescuento = CalculeRendimientoPorDescuento(ValorFacial, ValorTransadoBruto);
         }
 
         private static DateTime CalculeFechaVencimiento(DateTime FechaActual, int PlazoEnDias)
@@ -63,19 +56,20 @@ namespace Taller2.Objetos
             return TasaNeta / (1 - TasaDeImpuesto);
         }
 
-        private static decimal ObtengaValorTransadoBruto(decimal ValorTransadoNeto, decimal ValorFacial, DateTime FechaActual, int PlazoEnDias, bool TratamientoFiscal, decimal TasaBruta)
+        private static decimal DetermineValorTransadoBruto(decimal ValorTransadoNeto, decimal ValorFacial, DateTime FechaActual, int PlazoEnDias, bool TratamientoFiscal, decimal TasaBruta)
         {
             if (TratamientoFiscal)
             {
-                return DetermineValorTransadoBruto(ValorFacial, FechaActual, PlazoEnDias, TasaBruta);
+                return DetermineValorTransadoNeto(ValorFacial, FechaActual, PlazoEnDias, TasaBruta);
             }
             else
             {
                 return ValorTransadoNeto;
             }
+
         }
 
-        private static decimal DetermineValorTransadoBruto(decimal ValorFacial, DateTime FechaActual, int PlazoEnDias, decimal TasaBruta)
+        private static decimal DetermineValorTransadoNeto(decimal ValorFacial, DateTime FechaActual, int PlazoEnDias, decimal TasaBruta)
         {
             if (DateTime.IsLeapYear(FechaActual.Year))
             {
@@ -85,6 +79,7 @@ namespace Taller2.Objetos
             {
                 return ValorFacial / (1 + ((TasaBruta) / 100) * ((decimal)PlazoEnDias / 365));
             }
+
         }
 
         private static decimal DetermineImpuestoPagado(decimal ValorTransadoNeto, bool TratamientoFiscal, decimal ValorTransadoBruto)
@@ -103,5 +98,13 @@ namespace Taller2.Objetos
         {
             return Math.Round((ValorFacial - ValorTransadoBruto), 4);
         }
+
+        public decimal TasaBruta { get; set; }
+        public decimal ValorTransadoBruto { get; set; }
+        public decimal ImpuestoPagado { get; set; }
+        public decimal RendimientoPorDescuento { get; set; }
+        public DateTime FechaDeValor { get; set; }
+        public DateTime FechaDeVencimiento { get; set; }
     }
+
 }
