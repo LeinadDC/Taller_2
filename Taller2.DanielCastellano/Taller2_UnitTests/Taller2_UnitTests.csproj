@@ -52,6 +52,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="GeneracionDeInversion\4 Con Parameter Object\Escenarios.cs" />
+    <Compile Include="GeneracionDeInversion\4 Con Parameter Object\ImpuestoPagado.cs" />
+    <Compile Include="GeneracionDeInversion\4 Con Parameter Object\RendimiendoPorDescuento_Tests.cs" />
+    <Compile Include="GeneracionDeInversion\4 Con Parameter Object\TasaBruta_Tests.cs" />
+    <Compile Include="GeneracionDeInversion\4 Con Parameter Object\ValorTransadoBruto_Tests.cs" />
     <Compile Include="GeneracionDeInversion\3 Con Objetos\Escenarios.cs" />
     <Compile Include="GeneracionDeInversion\3 Con Objetos\ImpuestoPagado.cs" />
     <Compile Include="GeneracionDeInversion\3 Con Objetos\RendimiendoPorDescuento_Tests.cs" />
