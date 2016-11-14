@@ -52,11 +52,21 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="GeneracionDeInversion\0 Procedimiento\Escenarios.cs" />
-    <Compile Include="GeneracionDeInversion\0 Procedimiento\TasaBruta_Tests.cs" />
-    <Compile Include="GeneracionDeInversion\0 Procedimiento\ImpuestoPagado.cs" />
-    <Compile Include="GeneracionDeInversion\0 Procedimiento\RendimiendoPorDescuento_Tests.cs" />
-    <Compile Include="GeneracionDeInversion\0 Procedimiento\ValorTransadoBruto_Tests.cs" />
+    <Compile Include="GeneracionDeInversion\3 Con Objetos\Escenarios.cs" />
+    <Compile Include="GeneracionDeInversion\3 Con Objetos\ImpuestoPagado.cs" />
+    <Compile Include="GeneracionDeInversion\3 Con Objetos\RendimiendoPorDescuento_Tests.cs" />
+    <Compile Include="GeneracionDeInversion\3 Con Objetos\TasaBruta_Tests.cs" />
+    <Compile Include="GeneracionDeInversion\3 Con Objetos\ValorTransadoBruto_Tests.cs" />
+    <Compile Include="GeneracionDeInversion\2 Con Funciones\Escenarios.cs" />
+    <Compile Include="GeneracionDeInversion\2 Con Funciones\ImpuestoPagado.cs" />
+    <Compile Include="GeneracionDeInversion\2 Con Funciones\RendimiendoPorDescuento_Tests.cs" />
+    <Compile Include="GeneracionDeInversion\2 Con Funciones\TasaBruta_Tests.cs" />
+    <Compile Include="GeneracionDeInversion\2 Con Funciones\ValorTransadoBruto_Tests.cs" />
+    <Compile Include="GeneracionDeInversion\1 Procedimiento\Escenarios.cs" />
+    <Compile Include="GeneracionDeInversion\1 Procedimiento\TasaBruta_Tests.cs" />
+    <Compile Include="GeneracionDeInversion\1 Procedimiento\ImpuestoPagado.cs" />
+    <Compile Include="GeneracionDeInversion\1 Procedimiento\RendimiendoPorDescuento_Tests.cs" />
+    <Compile Include="GeneracionDeInversion\1 Procedimiento\ValorTransadoBruto_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
