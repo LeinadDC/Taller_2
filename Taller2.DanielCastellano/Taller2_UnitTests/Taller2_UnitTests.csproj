@@ -54,6 +54,9 @@
   <ItemGroup>
     <Compile Include="GeneracionDeInversion\0 Procedimiento\Escenarios.cs" />
     <Compile Include="GeneracionDeInversion\0 Procedimiento\TasaBruta_Tests.cs" />
+    <Compile Include="GeneracionDeInversion\0 Procedimiento\ImpuestoPagado.cs" />
+    <Compile Include="GeneracionDeInversion\0 Procedimiento\RendimiendoPorDescuento_Tests.cs" />
+    <Compile Include="GeneracionDeInversion\0 Procedimiento\ValorTransadoBruto_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

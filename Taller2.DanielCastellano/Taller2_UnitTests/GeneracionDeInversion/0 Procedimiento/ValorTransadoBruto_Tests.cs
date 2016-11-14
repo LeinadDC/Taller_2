@@ -5,7 +5,7 @@ using Taller2.Procedimiento;
 namespace Taller2_UnitTests.GeneracionDeInversion.Procedimiento
 {
     [TestClass]
-    public class TasaBruta_Tests : Escenarios
+    public class ValorTransadoBruto_Tests:Escenarios
     {
 
         private decimal resultadoEsperado;
@@ -13,23 +13,23 @@ namespace Taller2_UnitTests.GeneracionDeInversion.Procedimiento
         private NuevaInversion nuevaInversion;
 
         [TestMethod]
-        public void TasaBruta_AñoBisiesto()
+        public void ValorTransadoBruto_AñoBisiesto()
         {
-            resultadoEsperado = 12.300806610269525870548888446M;
+            resultadoEsperado = 298340.64080944350758853288365M;
 
             nuevaInversion = NuevaInversionConTratamientoFiscalYAñoBisiesto();
-            resultadoObtenido = nuevaInversion.TasaBruta;
+            resultadoObtenido = nuevaInversion.ValorTransadoBruto;
 
             Assert.AreEqual(resultadoEsperado, resultadoObtenido);
         }
 
         [TestMethod]
-        public void TasaBruta_AñoNormal()
+        public void ValorTransadoBruto_AñoNormal()
         {
-            resultadoEsperado = 12.267197849039281264345202967M;
+            resultadoEsperado = 298340.64080944350758853288362M;
 
             nuevaInversion = NuevaInversionConTratamientoFiscalYAñoNormal();
-            resultadoObtenido = nuevaInversion.TasaBruta;
+            resultadoObtenido = nuevaInversion.ValorTransadoBruto;
 
             Assert.AreEqual(resultadoEsperado, resultadoObtenido);
         }

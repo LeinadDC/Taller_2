@@ -5,33 +5,34 @@ using Taller2.Procedimiento;
 namespace Taller2_UnitTests.GeneracionDeInversion.Procedimiento
 {
     [TestClass]
-    public class TasaBruta_Tests : Escenarios
+    public class RendimiendoPorDescuento_Tests:Escenarios
     {
-
         private decimal resultadoEsperado;
         private decimal resultadoObtenido;
         private NuevaInversion nuevaInversion;
 
         [TestMethod]
-        public void TasaBruta_AñoBisiesto()
+        public void RendimientoPorDescuento_AñoBisiesto()
         {
-            resultadoEsperado = 12.300806610269525870548888446M;
+            resultadoEsperado = 22159.3592M;
 
             nuevaInversion = NuevaInversionConTratamientoFiscalYAñoBisiesto();
-            resultadoObtenido = nuevaInversion.TasaBruta;
+            resultadoObtenido = nuevaInversion.RendimientoPorDescuento;
 
             Assert.AreEqual(resultadoEsperado, resultadoObtenido);
+
         }
 
         [TestMethod]
-        public void TasaBruta_AñoNormal()
+        public void RendimientoPorDescuento_AñoNormal()
         {
-            resultadoEsperado = 12.267197849039281264345202967M;
+            resultadoEsperado = 22159.3592M;
 
             nuevaInversion = NuevaInversionConTratamientoFiscalYAñoNormal();
-            resultadoObtenido = nuevaInversion.TasaBruta;
+            resultadoObtenido = nuevaInversion.RendimientoPorDescuento;
 
             Assert.AreEqual(resultadoEsperado, resultadoObtenido);
+
         }
     }
 }

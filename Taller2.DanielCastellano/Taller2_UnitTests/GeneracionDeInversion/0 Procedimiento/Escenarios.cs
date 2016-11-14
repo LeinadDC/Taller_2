@@ -28,5 +28,18 @@ namespace Taller2_UnitTests.GeneracionDeInversion.Procedimiento
             return GeneraInversion.GeneraNuevaInversion(ValorTransadoNeto, ValorFacial, TasaDeImpuesto, FechaActual, PlazoEnDias, TratamientoFiscal);
 
         }
+
+        public NuevaInversion NuevaInversionConTratamientoFiscalYAñoNormal()
+        {
+            ValorFacial = 320500;
+            ValorTransadoNeto = 300000;
+            TasaDeImpuesto = 0.08M;
+            FechaActual = new DateTime(2014, 03, 03);
+            PlazoEnDias = 221;
+            TratamientoFiscal = true;
+
+            return GeneraInversion.GeneraNuevaInversion(ValorTransadoNeto, ValorFacial, TasaDeImpuesto, FechaActual, PlazoEnDias, TratamientoFiscal);
+
+        }
     }
 }

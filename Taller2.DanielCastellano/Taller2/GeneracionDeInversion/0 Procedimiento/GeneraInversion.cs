@@ -22,7 +22,16 @@ namespace Taller2.Procedimiento
             DateTime FechaDeVencimiento = FechaActual.AddDays(PlazoEnDias);
             nuevaInversion.FechaDeVencimiento = FechaDeVencimiento;
 
-            decimal TasaNeta = (ValorFacial - ValorTransadoNeto) / (ValorTransadoNeto * ((decimal)PlazoEnDias / 365)) *100;
+            decimal TasaNeta;
+            if (DateTime.IsLeapYear(FechaActual.Year))
+            {
+                TasaNeta = (ValorFacial - ValorTransadoNeto) / (ValorTransadoNeto * ((decimal)PlazoEnDias / 366)) *100;
+                
+            }
+            else
+            {
+                TasaNeta = (ValorFacial - ValorTransadoNeto) / (ValorTransadoNeto * ((decimal)PlazoEnDias / 365)) * 100;
+            }
 
             decimal TasaBruta = TasaNeta / (1 - TasaDeImpuesto);
             nuevaInversion.TasaBruta = TasaBruta;
@@ -32,11 +41,11 @@ namespace Taller2.Procedimiento
             {
                 if (DateTime.IsLeapYear(FechaActual.Year))
                 {
-                    ValorTransadoBruto = ValorFacial / (1 + ((TasaBruta) / 100) * PlazoEnDias / 366);
+                    ValorTransadoBruto = ValorFacial / (1 + ((TasaBruta) / 100) * ((decimal)PlazoEnDias / 366));
                 }
                 else
                 {
-                    ValorTransadoBruto = ValorFacial / (1 + ((TasaBruta) / 100) * PlazoEnDias / 365);
+                    ValorTransadoBruto = ValorFacial / (1 + ((TasaBruta) / 100) * ((decimal)PlazoEnDias / 365));
                 }
             }
             else
