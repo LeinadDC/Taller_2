@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Taller2.Funciones
+namespace Taller2.Objetos
 {
     public class GeneraInversion
     {
         public static NuevaInversion GeneraNuevaInversion(decimal ValorTransadoNeto,
-             decimal ValorFacial,
-             decimal TasaDeImpuesto,
-             DateTime FechaActual,
-             int PlazoEnDias,
-             bool TratamientoFiscal)
+            decimal ValorFacial,
+            decimal TasaDeImpuesto,
+            DateTime FechaActual,
+            int PlazoEnDias,
+            bool TratamientoFiscal)
         {
             NuevaInversion nuevaInversion = new NuevaInversion();
 
@@ -28,8 +28,8 @@ namespace Taller2.Funciones
             decimal ValorTransadoBruto = DetermineValorTransadoBruto(ValorTransadoNeto, ValorFacial, FechaActual, PlazoEnDias, TratamientoFiscal, TasaBruta);
             nuevaInversion.ValorTransadoBruto = ValorTransadoBruto;
 
-            decimal ImpuestoRedondeado = ObtieneImpuestoPagado(ValorTransadoNeto, TratamientoFiscal, ValorTransadoBruto);
-            nuevaInversion.ImpuestoPagado = ImpuestoRedondeado;
+            decimal ImpuestoPagado = ObtieneImpuestoPagado(ValorTransadoNeto, TratamientoFiscal, ValorTransadoBruto);
+            nuevaInversion.ImpuestoPagado = ImpuestoPagado;
 
             decimal RendimientoRedondeado = ObtengaRendimientoPorDescuento(ValorFacial, ValorTransadoBruto);
             nuevaInversion.RendimientoPorDescuento = RendimientoRedondeado;
@@ -83,7 +83,7 @@ namespace Taller2.Funciones
         {
             if (DateTime.IsLeapYear(FechaActual.Year))
             {
-                return ValorFacial / (1 + ((TasaBruta) / 100) * ((decimal)PlazoEnDias / 366));
+                return  ValorFacial / (1 + ((TasaBruta) / 100) * ((decimal)PlazoEnDias / 366));
             }
             else
             {
@@ -93,42 +93,15 @@ namespace Taller2.Funciones
 
         private static decimal ObtieneImpuestoPagado(decimal ValorTransadoNeto, bool TratamientoFiscal, decimal ValorTransadoBruto)
         {
-            decimal ImpuestoPagado = DetermineImpuestoPagado(ValorTransadoNeto, TratamientoFiscal, ValorTransadoBruto);
-            return RedondeeImpuesto(ImpuestoPagado);
+            return new ImpuestoPagado(ValorTransadoNeto, TratamientoFiscal, ValorTransadoBruto).ComoNumero();
         }
 
-        private static decimal DetermineImpuestoPagado(decimal ValorTransadoNeto, bool TratamientoFiscal, decimal ValorTransadoBruto)
-        {
-            if (TratamientoFiscal)
-            {
-                return (ValorTransadoNeto - ValorTransadoBruto);
-
-            }
-            else
-            {
-                return 0;
-            }
-        }
-
-        private static decimal RedondeeImpuesto(decimal ImpuestoPagado)
-        {
-            return Math.Round(ImpuestoPagado, 4);
-        }
 
         private static decimal ObtengaRendimientoPorDescuento(decimal ValorFacial, decimal ValorTransadoBruto)
         {
-            decimal RendimientoPorDescuento = CalculeRendimientoPorDescuento(ValorFacial, ValorTransadoBruto);
-            return RedondeeRendimiento(RendimientoPorDescuento);
+
+            return new RendimientoPorDescuento(ValorFacial,ValorTransadoBruto).ComoNumero();
         }
 
-        private static decimal CalculeRendimientoPorDescuento(decimal ValorFacial, decimal ValorTransadoBruto)
-        {
-            return (ValorFacial - ValorTransadoBruto);
-        }
-
-        private static decimal RedondeeRendimiento(decimal RendimientoPorDescuento)
-        {
-            return Math.Round(RendimientoPorDescuento, 4);
-        }
     }
 }

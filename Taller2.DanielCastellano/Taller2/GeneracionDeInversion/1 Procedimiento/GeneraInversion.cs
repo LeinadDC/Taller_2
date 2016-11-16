@@ -57,16 +57,15 @@ namespace Taller2.Procedimiento
             decimal ImpuestoPagado;
             if (TratamientoFiscal)
             {
-                decimal Impuesto = (ValorTransadoNeto - ValorTransadoBruto);
-                decimal ImpuestoRedondeado = Math.Round(Impuesto, 4);
-                ImpuestoPagado = ImpuestoRedondeado;
+                ImpuestoPagado = (ValorTransadoNeto - ValorTransadoBruto);
 
             }
             else
             {
                 ImpuestoPagado = 0;
             }
-            nuevaInversion.ImpuestoPagado = ImpuestoPagado;
+            decimal ImpuestoRedondeado = Math.Round(ImpuestoPagado, 4);
+            nuevaInversion.ImpuestoPagado = ImpuestoRedondeado;
 
             decimal RendimientoPorDescuento = (ValorFacial - ValorTransadoBruto);
             decimal RendimientoRedondeado = Math.Round(RendimientoPorDescuento, 4);
