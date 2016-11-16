@@ -52,21 +52,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\Escenarios.cs" />
-    <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\ImpuestoPagado.cs" />
-    <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\RendimiendoPorDescuento_Tests.cs" />
-    <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\TasaBruta_Tests.cs" />
-    <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\ValorTransadoBruto_Tests.cs" />
-    <Compile Include="GeneracionDeInversion\4 Con Parameter Object\Escenarios.cs" />
-    <Compile Include="GeneracionDeInversion\4 Con Parameter Object\ImpuestoPagado.cs" />
-    <Compile Include="GeneracionDeInversion\4 Con Parameter Object\RendimiendoPorDescuento_Tests.cs" />
-    <Compile Include="GeneracionDeInversion\4 Con Parameter Object\TasaBruta_Tests.cs" />
-    <Compile Include="GeneracionDeInversion\4 Con Parameter Object\ValorTransadoBruto_Tests.cs" />
-    <Compile Include="GeneracionDeInversion\3 Con Objetos\Escenarios.cs" />
-    <Compile Include="GeneracionDeInversion\3 Con Objetos\ImpuestoPagado.cs" />
-    <Compile Include="GeneracionDeInversion\3 Con Objetos\RendimiendoPorDescuento_Tests.cs" />
-    <Compile Include="GeneracionDeInversion\3 Con Objetos\TasaBruta_Tests.cs" />
-    <Compile Include="GeneracionDeInversion\3 Con Objetos\ValorTransadoBruto_Tests.cs" />
     <Compile Include="GeneracionDeInversion\2 Con Funciones\Escenarios.cs" />
     <Compile Include="GeneracionDeInversion\2 Con Funciones\ImpuestoPagado.cs" />
     <Compile Include="GeneracionDeInversion\2 Con Funciones\RendimiendoPorDescuento_Tests.cs" />
