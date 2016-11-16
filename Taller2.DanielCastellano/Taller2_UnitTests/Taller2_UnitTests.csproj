@@ -52,6 +52,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\Escenarios.cs" />
+    <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\ImpuestoPagado.cs" />
+    <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\RendimiendoPorDescuento_Tests.cs" />
+    <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\TasaBruta_Tests.cs" />
+    <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\ValorTransadoBruto_Tests.cs" />
     <Compile Include="GeneracionDeInversion\4 Con Parameter Object\Escenarios.cs" />
     <Compile Include="GeneracionDeInversion\4 Con Parameter Object\ImpuestoPagado.cs" />
     <Compile Include="GeneracionDeInversion\4 Con Parameter Object\RendimiendoPorDescuento_Tests.cs" />

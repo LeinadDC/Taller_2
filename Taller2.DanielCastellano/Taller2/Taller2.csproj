@@ -42,7 +42,9 @@
   <ItemGroup>
     <Compile Include="GeneracionDeInversion\1 Procedimiento\GeneraInversion.cs" />
     <Compile Include="GeneracionDeInversion\1 Procedimiento\NuevaInversion.cs" />
-    <Compile Include="GeneracionDeInversion\4 Con Parameter Object\DatosDeLaInversion.cs" />
+    <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\NuevaInversion.cs" />
+    <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\Parameter Objects\DatosDeLaInversion.cs" />
+    <Compile Include="GeneracionDeInversion\4 Con Parameter Object\Parameter Objects\DatosDeLaInversion.cs" />
     <Compile Include="GeneracionDeInversion\4 Con Parameter Object\NuevaInversion.cs" />
     <Compile Include="GeneracionDeInversion\3 ConObjetos\NuevaInversion.cs" />
     <Compile Include="GeneracionDeInversion\2 Con Funciones\GeneraInversion.cs" />
