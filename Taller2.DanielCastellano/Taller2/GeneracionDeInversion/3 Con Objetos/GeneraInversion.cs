@@ -35,7 +35,7 @@ namespace Taller2.Objetos
             nuevaInversion.RendimientoPorDescuento = RendimientoRedondeado;
 
             return nuevaInversion;
-
+              
         }
 
         private static DateTime CalculeFechaVencimiento(DateTime FechaActual, int PlazoEnDias)
@@ -45,26 +45,6 @@ namespace Taller2.Objetos
 
         private static decimal ObtengaTasaBruta(decimal ValorTransadoNeto, decimal ValorFacial, decimal TasaDeImpuesto, DateTime FechaActual, int PlazoEnDias)
         {
-            decimal TasaNeta = DetermineTasaNeta(ValorTransadoNeto, ValorFacial, FechaActual, PlazoEnDias);
-            return CalculeTasaBruta(TasaDeImpuesto, TasaNeta);
-        }
-
-        private static decimal DetermineTasaNeta(decimal ValorTransadoNeto, decimal ValorFacial, DateTime FechaActual, int PlazoEnDias)
-        {
-            if (DateTime.IsLeapYear(FechaActual.Year))
-            {
-                return (ValorFacial - ValorTransadoNeto) / (ValorTransadoNeto * ((decimal)PlazoEnDias / 366)) * 100;
-
-            }
-            else
-            {
-                return (ValorFacial - ValorTransadoNeto) / (ValorTransadoNeto * ((decimal)PlazoEnDias / 365)) * 100;
-            }
-        }
-
-        private static decimal CalculeTasaBruta(decimal TasaDeImpuesto, decimal TasaNeta)
-        {
-            return TasaNeta / (1 - TasaDeImpuesto);
         }
 
         private static decimal DetermineValorTransadoBruto(decimal ValorTransadoNeto, decimal ValorFacial, DateTime FechaActual, int PlazoEnDias, bool TratamientoFiscal, decimal TasaBruta)
