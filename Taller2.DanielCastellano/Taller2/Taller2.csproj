@@ -48,6 +48,8 @@
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\NuevaInversion.cs" />
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\DatosDeImpuesto.cs" />
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\DatosDeLaInversion.cs" />
+    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\ImpuestoConTratamientoFiscal.cs" />
+    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\ImpuestoSinTratamientoFiscal.cs" />
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\RendimientoPorDescuento.cs" />
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\TasaBruta.cs" />
     <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\ImpuestoPagado.cs" />
@@ -71,7 +73,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject.cd" />
+    <None Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\ParameterObject.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -32,7 +32,12 @@ namespace Taller2.Poliformismo
         }
 
         public DateTime FechaDeVencimiento
-        { get { return FechaActual.AddDays(PlazoEnDias); } }
+        {
+            get
+            {
+                return FechaActual.AddDays(PlazoEnDias);
+            }
+        }
     }
 }
 

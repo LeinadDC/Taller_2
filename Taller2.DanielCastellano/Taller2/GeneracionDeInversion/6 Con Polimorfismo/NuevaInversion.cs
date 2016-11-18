@@ -24,7 +24,6 @@ namespace Taller2.Poliformismo
             RendimientoPorDescuento = ObtengaRendimientoPorDescuento(losDatos);
         }
 
-
         private DateTime CalculeFechaDeVencimiento(DatosDeImpuesto losDatos)
         {
             return losDatos.FechaDeVencimiento;

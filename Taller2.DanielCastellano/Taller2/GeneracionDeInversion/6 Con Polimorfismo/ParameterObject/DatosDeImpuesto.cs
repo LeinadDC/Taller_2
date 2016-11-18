@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Taller2.Poliformismo
 {
-    public class DatosDeImpuesto: DatosDeLaInversion
+    public abstract class DatosDeImpuesto : DatosDeLaInversion
     {
         public decimal ValorTransadoBruto
         {
@@ -36,19 +36,6 @@ namespace Taller2.Poliformismo
 
         }
 
-        public decimal ImpuestoPagado
-        {
-            get
-            {
-                if (TratamientoFiscal)
-                {
-                    return (ValorTransadoNeto - ValorTransadoBruto);
-                }
-                else
-                {
-                    return 0;
-                }
-            }
-        }
+        public abstract decimal ImpuestoPagado { get; }
     }
 }
