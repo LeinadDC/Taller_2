@@ -52,6 +52,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="GeneracionDeInversion\6 Con Poliformismo\Escenarios.cs" />
+    <Compile Include="GeneracionDeInversion\6 Con Poliformismo\ImpuestoPagado.cs" />
+    <Compile Include="GeneracionDeInversion\6 Con Poliformismo\RendimiendoPorDescuento_Tests.cs" />
+    <Compile Include="GeneracionDeInversion\6 Con Poliformismo\TasaBruta_Tests.cs" />
+    <Compile Include="GeneracionDeInversion\6 Con Poliformismo\ValorTransadoBruto_Tests.cs" />
     <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\Escenarios.cs" />
     <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\ImpuestoPagado.cs" />
     <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\RendimiendoPorDescuento_Tests.cs" />

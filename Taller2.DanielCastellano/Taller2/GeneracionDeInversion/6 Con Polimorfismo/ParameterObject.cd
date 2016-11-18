@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Taller2.Poliformismo.NuevaInversion" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAABIAQAAQAAAAAAAABCAAAAAAAEAgAAgAAAAAAAQA=</HashCode>
+      <FileName>GeneracionDeInversion\6 Con Polimorfismo\NuevaInversion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taller2.Poliformismo.DatosDeImpuesto">
+    <Position X="2.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABIAAAAAAAAAAAAAAAAAAAAACAAACAAAAAAAAAAA=</HashCode>
+      <FileName>GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\DatosDeImpuesto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taller2.Poliformismo.DatosDeLaInversion">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAIAAAAIAAAAAAAAAAAAAAAgCAAACABAAAAAAIQQ=</HashCode>
+      <FileName>GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\DatosDeLaInversion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taller2.Poliformismo.ImpuestoPagado" Collapsed="true">
+    <Position X="6.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAACAAAAAAAAAAQA=</HashCode>
+      <FileName>GeneracionDeInversion\6 Con Polimorfismo\ImpuestoPagado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taller2.Poliformismo.RendimientoPorDescuento" Collapsed="true">
+    <Position X="2.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAQAAAQA=</HashCode>
+      <FileName>GeneracionDeInversion\6 Con Polimorfismo\RendimientoPorDescuento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taller2.Poliformismo.TasaBruta" Collapsed="true">
+    <Position X="5.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>GeneracionDeInversion\6 Con Polimorfismo\TasaBruta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

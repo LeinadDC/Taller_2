@@ -10,7 +10,6 @@ namespace Taller2.TellDontAsk
     {
         DateTime laFechaDeVencimiento;
         decimal laTasaBruta;
-        decimal elValorTransadoBruto;
         decimal elImpuestoPagado;
         decimal elRendimientoPorDescuento;
         DatosDeImpuesto losDatosDeImpuesto;
@@ -26,8 +25,7 @@ namespace Taller2.TellDontAsk
             laTasaBruta = ObtengaTasaBruta(losDatos);
             TasaBruta = laTasaBruta;
 
-            elValorTransadoBruto = ObtengaValorTransadoBruto(losDatos);
-            ValorTransadoBruto = elValorTransadoBruto;
+            ValorTransadoBruto = losDatos.ValorTransadoBruto;
 
             losDatosDeImpuesto = new DatosDeImpuesto();
             losDatosDeImpuesto.TratamientoFiscal = losDatos.TratamientoFiscal;
@@ -49,8 +47,7 @@ namespace Taller2.TellDontAsk
 
         private DateTime CalculeFechaDeVencimiento(DatosDeLaInversion losDatos)
         {
-            //TODO: Mas de una operacion
-            return losDatos.FechaActual.AddDays(losDatos.PlazoEnDias);
+            return losDatos.FechaDeVencimiento;
         }
 
         private decimal ObtengaTasaBruta(DatosDeLaInversion losDatos)
@@ -58,39 +55,10 @@ namespace Taller2.TellDontAsk
             return new TasaBruta(losDatos).ComoNumero();
         }
 
-        private decimal ObtengaValorTransadoBruto(DatosDeLaInversion losDatos)
-        {
-            //TODO: Mas de una operación
-            if (losDatos.TratamientoFiscal)
-            {
-                return DetermineValorTransadoBruto(losDatos);
-            }
-            else
-            {
-                return losDatos.ValorTransadoNeto;
-            }
-
-        }
-
-        private decimal DetermineValorTransadoBruto(DatosDeLaInversion losDatos)
-        {
-            //TODO: Mas de una operación
-            if (DateTime.IsLeapYear(losDatos.FechaActual.Year))
-            {
-                return losDatos.ValorFacial / (1 + ((TasaBruta) / 100) * ((decimal)losDatos.PlazoEnDias / 366));
-            }
-            else
-            {
-                return losDatos.ValorFacial / (1 + ((TasaBruta) / 100) * ((decimal)losDatos.PlazoEnDias / 365));
-            }
-
-        }
-
         private decimal ObtengaImpuestoPagado(DatosDeImpuesto losDatos)
         {
             return new ImpuestoPagado(losDatos).ComoNumero();
         }
-
 
         private decimal ObtengaRendimientoPorDescuento(DatosDeRendimiento losDatos)
         {

@@ -44,6 +44,12 @@
     <Compile Include="GeneracionDeInversion\1 Procedimiento\NuevaInversion.cs" />
     <Compile Include="GeneracionDeInversion\1 Procedimiento\GeneraInversion.cs" />
     <Compile Include="GeneracionDeInversion\2 Con Funciones\NuevaInversion.cs" />
+    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ImpuestoPagado.cs" />
+    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\NuevaInversion.cs" />
+    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\DatosDeImpuesto.cs" />
+    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\DatosDeLaInversion.cs" />
+    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\RendimientoPorDescuento.cs" />
+    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\TasaBruta.cs" />
     <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\ImpuestoPagado.cs" />
     <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\NuevaInversion.cs" />
     <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\ParameterObject\DatosDeImpuesto.cs" />
@@ -63,6 +69,9 @@
     <Compile Include="GeneracionDeInversion\3 ConObjetos\RendimientoPorDescuento.cs" />
     <Compile Include="GeneracionDeInversion\3 ConObjetos\TasaBruta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
