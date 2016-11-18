@@ -10,14 +10,14 @@ namespace Taller2.ParameterObject
     {
         decimal RendimientoSinRedondear;
 
-        public RendimientoPorDescuento(decimal ValorFacial, decimal ValorTransadoBruto)
+        public RendimientoPorDescuento(DatosDeRendimiento losDatos)
         {
-            RendimientoSinRedondear = CalculeRendimiento(ValorFacial, ValorTransadoBruto);
+            RendimientoSinRedondear = CalculeRendimiento(losDatos);
         }
 
-        private static decimal CalculeRendimiento(decimal ValorFacial, decimal ValorTransadoBruto)
+        private static decimal CalculeRendimiento(DatosDeRendimiento losDatos)
         {
-            return (ValorFacial - ValorTransadoBruto);
+            return (losDatos.ValorFacial - losDatos.ValorTransadoBruto);
         }
 
         public decimal ComoNumero()

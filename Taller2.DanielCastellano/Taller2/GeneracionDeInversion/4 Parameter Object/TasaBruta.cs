@@ -11,23 +11,23 @@ namespace Taller2.ParameterObject
         decimal TasaNeta;
         decimal TasaDeImpuesto;
 
-        public TasaBruta(decimal ValorTransadoNeto, decimal ValorFacial, decimal TasaDeImpuesto, DateTime FechaActual, int PlazoEnDias)
+        public TasaBruta(DatosDeLaInversion losDatos)
         {
 
-            TasaNeta = DetermineTasaNeta(ValorTransadoNeto, ValorFacial, FechaActual, PlazoEnDias);
-            this.TasaDeImpuesto = TasaDeImpuesto;
+            TasaNeta = DetermineTasaNeta(losDatos);
+            TasaDeImpuesto = losDatos.TasaDeImpuesto;
         }
 
-        private static decimal DetermineTasaNeta(decimal ValorTransadoNeto, decimal ValorFacial, DateTime FechaActual, int PlazoEnDias)
+        private static decimal DetermineTasaNeta(DatosDeLaInversion losDatos)
         {
-            if (DateTime.IsLeapYear(FechaActual.Year))
+            if (DateTime.IsLeapYear(losDatos.FechaActual.Year))
             {
-                return (ValorFacial - ValorTransadoNeto) / (ValorTransadoNeto * ((decimal)PlazoEnDias / 366)) * 100;
+                return (losDatos.ValorFacial - losDatos.ValorTransadoNeto) / (losDatos.ValorTransadoNeto * ((decimal)losDatos.PlazoEnDias / 366)) * 100;
 
             }
             else
             {
-                return (ValorFacial - ValorTransadoNeto) / (ValorTransadoNeto * ((decimal)PlazoEnDias / 365)) * 100;
+                return (losDatos.ValorFacial - losDatos.ValorTransadoNeto) / (losDatos.ValorTransadoNeto * ((decimal)losDatos.PlazoEnDias / 365)) * 100;
             }
 
         }

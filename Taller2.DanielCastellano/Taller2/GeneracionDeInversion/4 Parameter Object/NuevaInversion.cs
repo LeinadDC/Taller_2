@@ -14,6 +14,7 @@ namespace Taller2.ParameterObject
         decimal elImpuestoPagado;
         decimal elRendimientoPorDescuento;
         DatosDeImpuesto losDatosDeImpuesto;
+        DatosDeRendimiento losDatosDeRendimiento;
 
         public NuevaInversion(DatosDeLaInversion losDatos)
         {
@@ -22,7 +23,7 @@ namespace Taller2.ParameterObject
             laFechaDeVencimiento = CalculeFechaDeVencimiento(losDatos.FechaActual, losDatos.PlazoEnDias);
             FechaDeVencimiento = laFechaDeVencimiento;
 
-            laTasaBruta = ObtengaTasaBruta(losDatos.ValorTransadoNeto, losDatos.ValorFacial, losDatos.TasaDeImpuesto, losDatos.FechaActual, losDatos.PlazoEnDias);
+            laTasaBruta = ObtengaTasaBruta(losDatos);
             TasaBruta = laTasaBruta;
 
             elValorTransadoBruto = ObtengaValorTransadoBruto(losDatos.ValorTransadoNeto, losDatos.ValorFacial, losDatos.FechaActual, losDatos.PlazoEnDias, losDatos.TratamientoFiscal, laTasaBruta);
@@ -33,10 +34,14 @@ namespace Taller2.ParameterObject
             losDatosDeImpuesto.ValorTransadoBruto = ValorTransadoBruto;
             losDatosDeImpuesto.ValorTransadoNeto = losDatos.ValorTransadoNeto;
 
-            elImpuestoPagado = ObtengaImpuestoPagado(losDatos.ValorTransadoNeto, losDatos.TratamientoFiscal, elValorTransadoBruto);
+            elImpuestoPagado = ObtengaImpuestoPagado(losDatosDeImpuesto);
             ImpuestoPagado = elImpuestoPagado;
 
-            elRendimientoPorDescuento = ObtengaRendimientoPorDescuento(losDatos.ValorFacial, elValorTransadoBruto);
+            losDatosDeRendimiento = new DatosDeRendimiento();
+            losDatosDeRendimiento.ValorFacial = losDatos.ValorFacial;
+            losDatosDeRendimiento.ValorTransadoBruto = ValorTransadoBruto;
+
+            elRendimientoPorDescuento = ObtengaRendimientoPorDescuento(losDatosDeRendimiento);
             RendimientoPorDescuento = elRendimientoPorDescuento;
 
         }
@@ -47,9 +52,9 @@ namespace Taller2.ParameterObject
             return FechaActual.AddDays(PlazoEnDias);
         }
 
-        private static decimal ObtengaTasaBruta(decimal ValorTransadoNeto, decimal ValorFacial, decimal TasaDeImpuesto, DateTime FechaActual, int PlazoEnDias)
+        private static decimal ObtengaTasaBruta(DatosDeLaInversion losDatos)
         {
-            return new TasaBruta(ValorTransadoNeto, ValorFacial, TasaDeImpuesto, FechaActual, PlazoEnDias).ComoNumero();
+            return new TasaBruta(losDatos).ComoNumero();
         }
 
         private static decimal ObtengaValorTransadoBruto(decimal ValorTransadoNeto, decimal ValorFacial, DateTime FechaActual, int PlazoEnDias, bool TratamientoFiscal, decimal TasaBruta)
@@ -78,15 +83,15 @@ namespace Taller2.ParameterObject
 
         }
 
-        private decimal ObtengaImpuestoPagado(decimal ValorTransadoNeto, bool TratamientoFiscal, decimal ValorTransadoBruto)
+        private decimal ObtengaImpuestoPagado(DatosDeImpuesto losDatos)
         {
-            return new ImpuestoPagado(losDatosDeImpuesto).ComoNumero();
+            return new ImpuestoPagado(losDatos).ComoNumero();
         }
 
 
-        private static decimal ObtengaRendimientoPorDescuento(decimal ValorFacial, decimal ValorTransadoBruto)
+        private static decimal ObtengaRendimientoPorDescuento(DatosDeRendimiento losDatos)
         {
-            return new RendimientoPorDescuento(ValorFacial, ValorTransadoBruto).ComoNumero();
+            return new RendimientoPorDescuento(losDatos).ComoNumero();
         }
 
         public decimal TasaBruta { get; set; }
