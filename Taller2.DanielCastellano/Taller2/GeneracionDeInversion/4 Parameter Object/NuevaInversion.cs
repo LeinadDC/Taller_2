@@ -28,16 +28,17 @@ namespace Taller2.ParameterObject
             elValorTransadoBruto = ObtengaValorTransadoBruto(losDatos.ValorTransadoNeto, losDatos.ValorFacial, losDatos.FechaActual, losDatos.PlazoEnDias, losDatos.TratamientoFiscal, laTasaBruta);
             ValorTransadoBruto = elValorTransadoBruto;
 
+            losDatosDeImpuesto = new DatosDeImpuesto();
+            losDatosDeImpuesto.TratamientoFiscal = losDatos.TratamientoFiscal;
+            losDatosDeImpuesto.ValorTransadoBruto = ValorTransadoBruto;
+            losDatosDeImpuesto.ValorTransadoNeto = losDatos.ValorTransadoNeto;
+
             elImpuestoPagado = ObtengaImpuestoPagado(losDatos.ValorTransadoNeto, losDatos.TratamientoFiscal, elValorTransadoBruto);
             ImpuestoPagado = elImpuestoPagado;
 
             elRendimientoPorDescuento = ObtengaRendimientoPorDescuento(losDatos.ValorFacial, elValorTransadoBruto);
             RendimientoPorDescuento = elRendimientoPorDescuento;
 
-            losDatosDeImpuesto = new DatosDeImpuesto();
-            losDatosDeImpuesto.TratamientoFiscal = losDatos.TratamientoFiscal;
-            losDatosDeImpuesto.ValorTransadoBruto = ValorTransadoBruto;
-            losDatosDeImpuesto.ValorTransadoNeto = losDatos.ValorTransadoNeto;
         }
 
 

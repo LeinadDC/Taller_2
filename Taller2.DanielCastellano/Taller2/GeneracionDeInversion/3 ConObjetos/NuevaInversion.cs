@@ -15,7 +15,6 @@ namespace Taller2.Objetos
             int PlazoEnDias,
             bool TratamientoFiscal)
         {
-
             FechaDeValor = FechaActual;
 
             DateTime FechaVencimiento = CalculeFechaDeVencimiento(FechaActual, PlazoEnDias);
