@@ -44,6 +44,13 @@
     <Compile Include="GeneracionDeInversion\1 Procedimiento\NuevaInversion.cs" />
     <Compile Include="GeneracionDeInversion\1 Procedimiento\GeneraInversion.cs" />
     <Compile Include="GeneracionDeInversion\2 Con Funciones\NuevaInversion.cs" />
+    <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\ImpuestoPagado.cs" />
+    <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\NuevaInversion.cs" />
+    <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\ParameterObject\DatosDeImpuesto.cs" />
+    <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\ParameterObject\DatosDeLaInversion.cs" />
+    <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\ParameterObject\DatosDeRendimiento.cs" />
+    <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\RendimientoPorDescuento.cs" />
+    <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\TasaBruta.cs" />
     <Compile Include="GeneracionDeInversion\4 Parameter Object\ImpuestoPagado.cs" />
     <Compile Include="GeneracionDeInversion\4 Parameter Object\NuevaInversion.cs" />
     <Compile Include="GeneracionDeInversion\4 Parameter Object\ParameterObject\DatosDeImpuesto.cs" />

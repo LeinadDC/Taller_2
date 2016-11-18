@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Taller2.ParameterObject
+namespace Taller2.TellDontAsk
 {
     public class NuevaInversion
     {
@@ -49,6 +49,7 @@ namespace Taller2.ParameterObject
 
         private DateTime CalculeFechaDeVencimiento(DatosDeLaInversion losDatos)
         {
+            //TODO: Mas de una operacion
             return losDatos.FechaActual.AddDays(losDatos.PlazoEnDias);
         }
 

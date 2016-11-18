@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Taller2.ParameterObject
+namespace Taller2.TellDontAsk
 {
     public class TasaBruta
     {
@@ -20,17 +20,7 @@ namespace Taller2.ParameterObject
 
         private static decimal DetermineTasaNeta(DatosDeLaInversion losDatos)
         {
-            //TODO Más de una Operacion
-            if (DateTime.IsLeapYear(losDatos.FechaActual.Year))
-            {
-                return (losDatos.ValorFacial - losDatos.ValorTransadoNeto) / (losDatos.ValorTransadoNeto * ((decimal)losDatos.PlazoEnDias / 366)) * 100;
-
-            }
-            else
-            {
-                return (losDatos.ValorFacial - losDatos.ValorTransadoNeto) / (losDatos.ValorTransadoNeto * ((decimal)losDatos.PlazoEnDias / 365)) * 100;
-            }
-
+            return losDatos.TasaNeta;
         }
 
         public decimal ComoNumero()
