@@ -20,13 +20,13 @@ namespace Taller2.ParameterObject
         {
             FechaDeValor = losDatos.FechaActual;
 
-            laFechaDeVencimiento = CalculeFechaDeVencimiento(losDatos.FechaActual, losDatos.PlazoEnDias);
+            laFechaDeVencimiento = CalculeFechaDeVencimiento(losDatos);
             FechaDeVencimiento = laFechaDeVencimiento;
 
             laTasaBruta = ObtengaTasaBruta(losDatos);
             TasaBruta = laTasaBruta;
 
-            elValorTransadoBruto = ObtengaValorTransadoBruto(losDatos.ValorTransadoNeto, losDatos.ValorFacial, losDatos.FechaActual, losDatos.PlazoEnDias, losDatos.TratamientoFiscal, laTasaBruta);
+            elValorTransadoBruto = ObtengaValorTransadoBruto(losDatos);
             ValorTransadoBruto = elValorTransadoBruto;
 
             losDatosDeImpuesto = new DatosDeImpuesto();
@@ -47,38 +47,38 @@ namespace Taller2.ParameterObject
         }
 
 
-        private static DateTime CalculeFechaDeVencimiento(DateTime FechaActual, int PlazoEnDias)
+        private DateTime CalculeFechaDeVencimiento(DatosDeLaInversion losDatos)
         {
-            return FechaActual.AddDays(PlazoEnDias);
+            return losDatos.FechaActual.AddDays(losDatos.PlazoEnDias);
         }
 
-        private static decimal ObtengaTasaBruta(DatosDeLaInversion losDatos)
+        private decimal ObtengaTasaBruta(DatosDeLaInversion losDatos)
         {
             return new TasaBruta(losDatos).ComoNumero();
         }
 
-        private static decimal ObtengaValorTransadoBruto(decimal ValorTransadoNeto, decimal ValorFacial, DateTime FechaActual, int PlazoEnDias, bool TratamientoFiscal, decimal TasaBruta)
+        private decimal ObtengaValorTransadoBruto(DatosDeLaInversion losDatos)
         {
-            if (TratamientoFiscal)
+            if (losDatos.TratamientoFiscal)
             {
-                return DetermineValorTransadoBruto(ValorFacial, FechaActual, PlazoEnDias, TasaBruta);
+                return DetermineValorTransadoBruto(losDatos);
             }
             else
             {
-                return ValorTransadoNeto;
+                return losDatos.ValorTransadoNeto;
             }
 
         }
 
-        private static decimal DetermineValorTransadoBruto(decimal ValorFacial, DateTime FechaActual, int PlazoEnDias, decimal TasaBruta)
+        private decimal DetermineValorTransadoBruto(DatosDeLaInversion losDatos)
         {
-            if (DateTime.IsLeapYear(FechaActual.Year))
+            if (DateTime.IsLeapYear(losDatos.FechaActual.Year))
             {
-                return ValorFacial / (1 + ((TasaBruta) / 100) * ((decimal)PlazoEnDias / 366));
+                return losDatos.ValorFacial / (1 + ((TasaBruta) / 100) * ((decimal)losDatos.PlazoEnDias / 366));
             }
             else
             {
-                return ValorFacial / (1 + ((TasaBruta) / 100) * ((decimal)PlazoEnDias / 365));
+                return losDatos.ValorFacial / (1 + ((TasaBruta) / 100) * ((decimal)losDatos.PlazoEnDias / 365));
             }
 
         }
@@ -89,7 +89,7 @@ namespace Taller2.ParameterObject
         }
 
 
-        private static decimal ObtengaRendimientoPorDescuento(DatosDeRendimiento losDatos)
+        private decimal ObtengaRendimientoPorDescuento(DatosDeRendimiento losDatos)
         {
             return new RendimientoPorDescuento(losDatos).ComoNumero();
         }
