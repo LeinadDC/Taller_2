@@ -50,6 +50,8 @@
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\DatosDeLaInversion.cs" />
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\ImpuestoConTratamientoFiscal.cs" />
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\ImpuestoSinTratamientoFiscal.cs" />
+    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\TasaNetaAñoBisiesto.cs" />
+    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\TasaNetaAñoNormal.cs" />
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\RendimientoPorDescuento.cs" />
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\TasaBruta.cs" />
     <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\ImpuestoPagado.cs" />

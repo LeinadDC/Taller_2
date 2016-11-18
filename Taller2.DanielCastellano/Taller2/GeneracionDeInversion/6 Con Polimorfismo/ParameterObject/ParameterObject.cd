@@ -28,5 +28,19 @@
       <FileName>GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\ImpuestoConTratamientoFiscal.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Taller2.Poliformismo.TasaNetaAñoBisiesto" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\TasaNetaAñoBisiesto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taller2.Poliformismo.TasaNetaAñoNormal" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\TasaNetaAñoNormal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

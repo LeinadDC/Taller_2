@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Taller2.Poliformismo
 {
-    public class DatosDeLaInversion
+    public abstract class DatosDeLaInversion
     {
         public bool TratamientoFiscal { get; set; }
         public int PlazoEnDias { get; set; }
@@ -15,21 +15,7 @@ namespace Taller2.Poliformismo
         public decimal ValorFacial { get; set; }
         public decimal ValorTransadoNeto { get; set; }
 
-        public decimal TasaNeta
-        {
-            get
-            {
-                if (DateTime.IsLeapYear(FechaActual.Year))
-                {
-                    return (ValorFacial - ValorTransadoNeto) / (ValorTransadoNeto * ((decimal)PlazoEnDias / 366)) * 100;
-
-                }
-                else
-                {
-                    return (ValorFacial - ValorTransadoNeto) / (ValorTransadoNeto * ((decimal)PlazoEnDias / 365)) * 100;
-                }
-            }
-        }
+        public abstract decimal TasaNeta { get; }
 
         public DateTime FechaDeVencimiento
         {
@@ -40,4 +26,5 @@ namespace Taller2.Poliformismo
         }
     }
 }
+
 
