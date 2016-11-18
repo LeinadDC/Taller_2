@@ -57,3 +57,4 @@ namespace Taller2_UnitTests.GeneracionDeInversion.ParameterObject
         }
     }
 }
+

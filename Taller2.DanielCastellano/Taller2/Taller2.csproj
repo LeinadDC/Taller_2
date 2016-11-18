@@ -40,13 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GeneracionDeInversion\1 Procedimiento\GeneraInversion.cs" />
-    <Compile Include="GeneracionDeInversion\1 Procedimiento\NuevaInversion.cs" />
-    <Compile Include="GeneracionDeInversion\4 Con Parameter Object\DatosDeLaInversion.cs" />
-    <Compile Include="GeneracionDeInversion\4 Con Parameter Object\NuevaInversion.cs" />
-    <Compile Include="GeneracionDeInversion\3 ConObjetos\NuevaInversion.cs" />
     <Compile Include="GeneracionDeInversion\2 Con Funciones\GeneraInversion.cs" />
+    <Compile Include="GeneracionDeInversion\1 Procedimiento\NuevaInversion.cs" />
+    <Compile Include="GeneracionDeInversion\1 Procedimiento\GeneraInversion.cs" />
     <Compile Include="GeneracionDeInversion\2 Con Funciones\NuevaInversion.cs" />
+    <Compile Include="GeneracionDeInversion\4 Parameter Object\ImpuestoPagado.cs" />
+    <Compile Include="GeneracionDeInversion\4 Parameter Object\NuevaInversion.cs" />
+    <Compile Include="GeneracionDeInversion\4 Parameter Object\ParameterObject\DatosDeImpuesto.cs" />
+    <Compile Include="GeneracionDeInversion\4 Parameter Object\ParameterObject\DatosDeLaInversion.cs" />
+    <Compile Include="GeneracionDeInversion\4 Parameter Object\RendimientoPorDescuento.cs" />
+    <Compile Include="GeneracionDeInversion\4 Parameter Object\TasaBruta.cs" />
+    <Compile Include="GeneracionDeInversion\3 ConObjetos\ImpuestoPagado.cs" />
+    <Compile Include="GeneracionDeInversion\3 ConObjetos\NuevaInversion.cs" />
+    <Compile Include="GeneracionDeInversion\3 ConObjetos\RendimientoPorDescuento.cs" />
+    <Compile Include="GeneracionDeInversion\3 ConObjetos\TasaBruta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

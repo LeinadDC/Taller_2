@@ -4,34 +4,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Taller2.Objetos
+namespace Taller2.ParameterObject
 {
     public class NuevaInversion
     {
-        public NuevaInversion(decimal ValorTransadoNeto,
-            decimal ValorFacial,
-            decimal TasaDeImpuesto,
-            DateTime FechaActual,
-            int PlazoEnDias,
-            bool TratamientoFiscal)
+        DateTime laFechaDeVencimiento;
+        decimal laTasaBruta;
+        decimal elValorTransadoBruto;
+        decimal elImpuestoPagado;
+        decimal elRendimientoPorDescuento;
+        DatosDeImpuesto losDatosDeImpuesto;
+
+        public NuevaInversion(DatosDeLaInversion losDatos)
         {
+            FechaDeValor = losDatos.FechaActual;
 
-            FechaDeValor = FechaActual;
+            laFechaDeVencimiento = CalculeFechaDeVencimiento(losDatos.FechaActual, losDatos.PlazoEnDias);
+            FechaDeVencimiento = laFechaDeVencimiento;
 
-            DateTime FechaVencimiento = CalculeFechaDeVencimiento(FechaActual, PlazoEnDias);
-            FechaDeVencimiento = FechaVencimiento;
+            laTasaBruta = ObtengaTasaBruta(losDatos.ValorTransadoNeto, losDatos.ValorFacial, losDatos.TasaDeImpuesto, losDatos.FechaActual, losDatos.PlazoEnDias);
+            TasaBruta = laTasaBruta;
 
-            decimal TasaBrutaCalculada = ObtengaTasaBruta(ValorTransadoNeto, ValorFacial, TasaDeImpuesto, FechaActual, PlazoEnDias);
-            TasaBruta = TasaBrutaCalculada;
+            elValorTransadoBruto = ObtengaValorTransadoBruto(losDatos.ValorTransadoNeto, losDatos.ValorFacial, losDatos.FechaActual, losDatos.PlazoEnDias, losDatos.TratamientoFiscal, laTasaBruta);
+            ValorTransadoBruto = elValorTransadoBruto;
 
-            decimal ValorTransado = ObtengaValorTransadoBruto(ValorTransadoNeto, ValorFacial, FechaActual, PlazoEnDias, TratamientoFiscal, TasaBrutaCalculada);
-            ValorTransadoBruto = ValorTransado;
+            elImpuestoPagado = ObtengaImpuestoPagado(losDatos.ValorTransadoNeto, losDatos.TratamientoFiscal, elValorTransadoBruto);
+            ImpuestoPagado = elImpuestoPagado;
 
-            decimal Impuesto = ObtengaImpuestoPagado(ValorTransadoNeto, TratamientoFiscal, ValorTransado);
-            ImpuestoPagado = Impuesto;
+            elRendimientoPorDescuento = ObtengaRendimientoPorDescuento(losDatos.ValorFacial, elValorTransadoBruto);
+            RendimientoPorDescuento = elRendimientoPorDescuento;
 
-            decimal RendimientoCalculado = ObtengaRendimientoPorDescuento(ValorFacial, ValorTransado);
-            RendimientoPorDescuento = RendimientoCalculado;
+            losDatosDeImpuesto = new DatosDeImpuesto();
+            losDatosDeImpuesto.TratamientoFiscal = losDatos.TratamientoFiscal;
+            losDatosDeImpuesto.ValorTransadoBruto = ValorTransadoBruto;
+            losDatosDeImpuesto.ValorTransadoNeto = losDatos.ValorTransadoNeto;
         }
 
 
@@ -71,9 +77,9 @@ namespace Taller2.Objetos
 
         }
 
-        private static decimal ObtengaImpuestoPagado(decimal ValorTransadoNeto, bool TratamientoFiscal, decimal ValorTransadoBruto)
+        private decimal ObtengaImpuestoPagado(decimal ValorTransadoNeto, bool TratamientoFiscal, decimal ValorTransadoBruto)
         {
-            return new ImpuestoPagado(ValorTransadoNeto, TratamientoFiscal, ValorTransadoBruto).ComoNumero();
+            return new ImpuestoPagado(losDatosDeImpuesto).ComoNumero();
         }
 
 

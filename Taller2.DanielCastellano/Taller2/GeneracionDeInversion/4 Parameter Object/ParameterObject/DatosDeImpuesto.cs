@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace Taller2.ParameterObject
 {
-    public class DatosDeLaInversion
+    public class DatosDeImpuesto
     {
         public decimal ValorTransadoNeto { get; set; }
-        public decimal ValorFacial { get; set; }
-        public decimal TasaDeImpuesto { get; set; }
-        public DateTime FechaActual { get; set; }
-        public int PlazoEnDias { get; set; }
         public bool TratamientoFiscal { get; set; }
+        public decimal ValorTransadoBruto { get; set; }
     }
 }

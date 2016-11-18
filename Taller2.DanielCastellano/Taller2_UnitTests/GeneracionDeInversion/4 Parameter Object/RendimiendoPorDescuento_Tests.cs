@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Taller2.Objetos;
+using Taller2.ParameterObject;
 
-namespace Taller2_UnitTests.GeneracionDeInversion.Objetos
+namespace Taller2_UnitTests.GeneracionDeInversion.ParameterObject
 {
     [TestClass]
     public class RendimiendoPorDescuento_Tests : Escenarios
