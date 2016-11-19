@@ -13,7 +13,7 @@ namespace Taller2_UnitTests.GeneracionDeInversion.Poliformismo
 
         public NuevaInversion NuevaInversionConTratamientoFiscalYAñoBisiesto()
         {
-            losDatos = new ImpuestoConTratamientoFiscal();
+            losDatos = new DatosConTratamientoFiscalAñoBisiesto();
             losDatos.ValorFacial = 320500;
             losDatos.ValorTransadoNeto = 300000;
             losDatos.TasaDeImpuesto = 0.08M;
@@ -27,7 +27,7 @@ namespace Taller2_UnitTests.GeneracionDeInversion.Poliformismo
 
         public NuevaInversion NuevaInversionConTratamientoFiscalYAñoNormal()
         {
-            losDatos = new ImpuestoConTratamientoFiscal();
+            losDatos = new DatosConTratamientoFiscalAñoNormal();
             losDatos.ValorFacial = 320500;
             losDatos.ValorTransadoNeto = 300000;
             losDatos.TasaDeImpuesto = 0.08M;
@@ -41,7 +41,7 @@ namespace Taller2_UnitTests.GeneracionDeInversion.Poliformismo
 
         public NuevaInversion NuevaInversionSinTratamientoFiscalYAñoBisiesto()
         {
-            losDatos = new ImpuestoSinTratamientoFiscal();
+            losDatos = new DatosSinTratamientoFiscalAñoBisiesto();
             losDatos.ValorFacial = 320500;
             losDatos.ValorTransadoNeto = 300000;
             losDatos.TasaDeImpuesto = 0.08M;
@@ -55,7 +55,7 @@ namespace Taller2_UnitTests.GeneracionDeInversion.Poliformismo
 
         public NuevaInversion NuevaInversionSinTratamientoFiscalYAñoNormal()
         {
-            losDatos = new ImpuestoSinTratamientoFiscal();
+            losDatos = new DatosSinTratamientoFiscalAñoNormal();
             losDatos.ValorFacial = 320500;
             losDatos.ValorTransadoNeto = 300000;
             losDatos.TasaDeImpuesto = 0.08M;

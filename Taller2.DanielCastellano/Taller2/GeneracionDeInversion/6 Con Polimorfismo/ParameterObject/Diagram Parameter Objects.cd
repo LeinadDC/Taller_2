@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Taller2.Poliformismo.DatosDeImpuesto" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\DatosDeImpuesto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taller2.Poliformismo.DatosDeLaInversion" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAIAAAAAAAAAAAAAAAgCAAACAAAAAAAAIQQ=</HashCode>
+      <FileName>GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\DatosDeLaInversion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taller2.Poliformismo.DatosConTratamientoFiscal" Collapsed="true">
+    <Position X="4.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\ConTratamientoFiscal\DatosConTratamientoFiscal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taller2.Poliformismo.DatosSinTratamientoFiscal" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\SinTratamientoFiscal\DatosSinTratamientoFiscal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taller2.Poliformismo.DatosConTratamientoFiscalAñoBisiesto" Collapsed="true">
+    <Position X="4.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\ConTratamientoFiscal\DatosConTratamientoFiscalAñoBisiesto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taller2.Poliformismo.DatosConTratamientoFiscalAñoNormal" Collapsed="true">
+    <Position X="4.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\ConTratamientoFiscal\DatosConTratamientoFiscalAñoNormal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taller2.Poliformismo.DatosSinTratamientoFiscalAñoBisiesto" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\SinTratamientoFiscal\DatosSinTratamientoFiscalAñoBisiesto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taller2.Poliformismo.DatosSinTratamientoFiscalAñoNormal" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\SinTratamientoFiscal\DatosSinTratamientoFiscalAñoNormal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

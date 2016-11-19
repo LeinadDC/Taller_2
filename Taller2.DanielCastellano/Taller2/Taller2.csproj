@@ -44,15 +44,16 @@
     <Compile Include="GeneracionDeInversion\1 Procedimiento\NuevaInversion.cs" />
     <Compile Include="GeneracionDeInversion\1 Procedimiento\GeneraInversion.cs" />
     <Compile Include="GeneracionDeInversion\2 Con Funciones\NuevaInversion.cs" />
-    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\DatosConTratamientoFiscalAñoNormal.cs" />
+    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\ConTratamientoFiscal\DatosConTratamientoFiscalAñoNormal.cs" />
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ImpuestoPagado.cs" />
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\NuevaInversion.cs" />
-    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\DatosConTratamientoFiscal.cs" />
+    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\ConTratamientoFiscal\DatosConTratamientoFiscal.cs" />
+    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\ConTratamientoFiscal\DatosConTratamientoFiscalAñoBisiesto.cs" />
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\DatosDeImpuesto.cs" />
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\DatosDeLaInversion.cs" />
-    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\DatosSinTratamientoFiscal.cs" />
-    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\ImpuestoConTratamientoFiscal.cs" />
-    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\ImpuestoSinTratamientoFiscal.cs" />
+    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\SinTratamientoFiscal\DatosSinTratamientoFiscal.cs" />
+    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\SinTratamientoFiscal\DatosSinTratamientoFiscalAñoBisiesto.cs" />
+    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\SinTratamientoFiscal\DatosSinTratamientoFiscalAñoNormal.cs" />
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\RendimientoPorDescuento.cs" />
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\TasaBruta.cs" />
     <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\ImpuestoPagado.cs" />
@@ -76,7 +77,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\ParameterObject.cd" />
+    <None Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\Diagram Parameter Objects.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -9,32 +9,6 @@ namespace Taller2.Poliformismo
     public abstract class DatosDeImpuesto : DatosDeLaInversion
     {
         public abstract decimal ValorTransadoBruto { get; }
-       /* {
-            get
-            {
-                if (TratamientoFiscal)
-                {
-                    return DetermineValorTransadoBruto(this);
-                }
-                else
-                {
-                    return ValorTransadoNeto;
-                }
-            }
-        }*/
-
-        private decimal DetermineValorTransadoBruto(DatosDeLaInversion losDatos)
-        {
-            if (DateTime.IsLeapYear(FechaActual.Year))
-            {
-                return ValorFacial / (1 + ((new TasaBruta(this).ComoNumero()) / 100) * ((decimal)PlazoEnDias / 366));
-            }
-            else
-            {
-                return ValorFacial / (1 + ((new TasaBruta(this).ComoNumero()) / 100) * ((decimal)PlazoEnDias / 365));
-            }
-
-        }
 
         public abstract decimal ImpuestoPagado { get; }
     }
