@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Taller2.Poliformismo
 {
-    public class ImpuestoSinTratamientoFiscal : DatosDeImpuesto
+    public abstract class ImpuestoSinTratamientoFiscal : DatosDeImpuesto
     {
 
         /*TODO: Hacerlo abstracto

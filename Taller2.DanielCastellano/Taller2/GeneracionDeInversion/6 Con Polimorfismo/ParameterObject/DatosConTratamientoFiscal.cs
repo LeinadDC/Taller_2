@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Taller2.Poliformismo
 {
-    public class TasaNetaAñoBisiesto : DatosDeLaInversion
+    public abstract class DatosConTratamientoFiscal : DatosDeImpuesto
     {
-        public override decimal TasaNeta
+        public override decimal ImpuestoPagado
         {
             get
             {
-                return (ValorFacial - ValorTransadoNeto) / (ValorTransadoNeto * ((decimal)PlazoEnDias / 366)) * 100;
+                return (ValorTransadoNeto - ValorTransadoBruto);
             }
         }
     }

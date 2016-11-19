@@ -6,17 +6,13 @@ using System.Threading.Tasks;
 
 namespace Taller2.Poliformismo
 {
-    public abstract class ImpuestoConTratamientoFiscal : DatosDeImpuesto
+    public abstract class DatosSinTratamientoFiscal:DatosDeImpuesto
     {
-        /*TODO: Hacerlo abstracto
-         * E implementar tasa neta bisiesta y normal
-         */
-
         public override decimal ImpuestoPagado
         {
             get
             {
-                return (ValorTransadoNeto - ValorTransadoBruto);
+                return 0;
             }
         }
     }

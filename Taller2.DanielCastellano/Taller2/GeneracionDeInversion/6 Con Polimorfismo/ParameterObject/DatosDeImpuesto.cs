@@ -8,8 +8,8 @@ namespace Taller2.Poliformismo
 {
     public abstract class DatosDeImpuesto : DatosDeLaInversion
     {
-        public decimal ValorTransadoBruto
-        {
+        public abstract decimal ValorTransadoBruto { get; }
+       /* {
             get
             {
                 if (TratamientoFiscal)
@@ -21,7 +21,7 @@ namespace Taller2.Poliformismo
                     return ValorTransadoNeto;
                 }
             }
-        }
+        }*/
 
         private decimal DetermineValorTransadoBruto(DatosDeLaInversion losDatos)
         {

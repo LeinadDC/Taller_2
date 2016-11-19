@@ -44,14 +44,15 @@
     <Compile Include="GeneracionDeInversion\1 Procedimiento\NuevaInversion.cs" />
     <Compile Include="GeneracionDeInversion\1 Procedimiento\GeneraInversion.cs" />
     <Compile Include="GeneracionDeInversion\2 Con Funciones\NuevaInversion.cs" />
+    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\DatosConTratamientoFiscalAñoNormal.cs" />
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ImpuestoPagado.cs" />
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\NuevaInversion.cs" />
+    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\DatosConTratamientoFiscal.cs" />
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\DatosDeImpuesto.cs" />
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\DatosDeLaInversion.cs" />
+    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\DatosSinTratamientoFiscal.cs" />
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\ImpuestoConTratamientoFiscal.cs" />
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\ImpuestoSinTratamientoFiscal.cs" />
-    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\TasaNetaAñoBisiesto.cs" />
-    <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\ParameterObject\TasaNetaAñoNormal.cs" />
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\RendimientoPorDescuento.cs" />
     <Compile Include="GeneracionDeInversion\6 Con Polimorfismo\TasaBruta.cs" />
     <Compile Include="GeneracionDeInversion\5 Con Tell Dont Ask\ImpuestoPagado.cs" />
