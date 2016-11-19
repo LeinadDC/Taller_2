@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Taller2.Poliformismo;
+using Taller2.PolimorfismoYHerencia;
 
 namespace Taller2_UnitTests.GeneracionDeInversion.Poliformismo
 {

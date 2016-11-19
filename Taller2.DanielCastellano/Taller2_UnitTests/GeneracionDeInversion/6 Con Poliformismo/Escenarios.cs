@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Taller2.Poliformismo;
+using Taller2.PolimorfismoYHerencia;
 
 namespace Taller2_UnitTests.GeneracionDeInversion.Poliformismo
 {

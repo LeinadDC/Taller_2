@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Taller2.Poliformismo
+namespace Taller2.PolimorfismoYHerencia
 {
     public class RendimientoPorDescuento
     {
@@ -17,7 +17,7 @@ namespace Taller2.Poliformismo
 
         private static decimal CalculeRendimiento(DatosDeImpuesto losDatos)
         {
-            return (losDatos.ValorFacial - losDatos.ValorTransadoBruto);
+            return losDatos.Rendimiento;
         }
 
         public decimal ComoNumero()

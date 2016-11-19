@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Taller2.Poliformismo
+namespace Taller2.PolimorfismoYHerencia
 {
     public class ImpuestoPagado
     {
