@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taller2", "Taller2\Taller2.csproj", "{2B626C21-22BF-4A96-9572-6AA19D7629FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dcastellanom624.Taller2", "Taller2\dcastellanom624.Taller2.csproj", "{2B626C21-22BF-4A96-9572-6AA19D7629FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taller2_UnitTests", "Taller2_UnitTests\Taller2_UnitTests.csproj", "{83DB4BA1-A8A1-4B64-9FB1-7CC245DE6030}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dcastellanom624_UnitTests", "Taller2_UnitTests\dcastellanom624_UnitTests.csproj", "{83DB4BA1-A8A1-4B64-9FB1-7CC245DE6030}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

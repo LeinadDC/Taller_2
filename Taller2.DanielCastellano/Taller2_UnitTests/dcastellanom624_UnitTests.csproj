@@ -85,9 +85,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Taller2\Taller2.csproj">
+    <ProjectReference Include="..\Taller2\dcastellanom624.Taller2.csproj">
       <Project>{2b626c21-22bf-4a96-9572-6aa19d7629fe}</Project>
-      <Name>Taller2</Name>
+      <Name>dcastellanom624.Taller2</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
