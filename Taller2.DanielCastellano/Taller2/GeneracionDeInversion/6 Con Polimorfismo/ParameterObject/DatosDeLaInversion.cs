@@ -15,7 +15,21 @@ namespace Taller2.PolimorfismoYHerencia
         public decimal ValorFacial { get; set; }
         public decimal ValorTransadoNeto { get; set; }
 
-        public abstract decimal TasaNeta { get; }
+        public decimal TasaNeta
+        {
+            get
+            {
+                if (DateTime.IsLeapYear(FechaActual.Year))
+                {
+                    return (ValorFacial - ValorTransadoNeto) / (ValorTransadoNeto * ((decimal)PlazoEnDias / 366)) * 100;
+
+                }
+                else
+                {
+                    return (ValorFacial - ValorTransadoNeto) / (ValorTransadoNeto * ((decimal)PlazoEnDias / 365)) * 100;
+                }
+            }
+        }
 
         public DateTime FechaDeVencimiento
         {

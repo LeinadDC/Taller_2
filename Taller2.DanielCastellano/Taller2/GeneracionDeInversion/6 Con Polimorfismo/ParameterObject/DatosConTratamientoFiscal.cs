@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Taller2.PolimorfismoYHerencia
 {
-    public abstract class DatosConTratamientoFiscal : DatosDeImpuesto
+    public class DatosConTratamientoFiscal : DatosDeImpuesto
     {
         public override decimal ImpuestoPagado
         {
